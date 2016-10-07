@@ -18,7 +18,7 @@ let url = request.url;
 //console.log("url********",url);
 let show;
 let splitUrl = url.split(".")[1];
-console.log('splitURL********:',splitUrl);
+  console.log('splitURL********:',splitUrl);
   if(splitUrl !== "css"){
     if (request.method === "GET"){
       fs.readFile(`./public/${url}`, (err, data) => {
@@ -61,21 +61,5 @@ console.log('splitURL********:',splitUrl);
 
     });
   }
-
-
-  //console.log('data: ', JSON.parse(data).name);
-  //write headers
-
-/*  response.writeHead(200, {
-    'cabsHere': 'true',
-
-  });*/
-
-/*  response.writeHead(404, {
-    'cabsHere': 'true',
-  });*/
-
-  //ending it
-/*  response.end('Hello Client');*/
 
 }).listen(PORT);
